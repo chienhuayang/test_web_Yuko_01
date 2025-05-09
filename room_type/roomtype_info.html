@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 設定 favicon -->
+    <link rel="icon" href="./image/logo1_big.png" type="image/png">
+    <title> 房型介紹 | 嶼蔻 Maison d’Yuko</title>
+    <!-- 載入slick套件 -->
+    <link rel="stylesheet" href="./vendor/slick/slick.css">
+    <link rel="stylesheet" href="./vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="logo" onclick="goHome()">
+        <img src="./image/logo_1_closer.png" alt="Logo" class="logo-image">
+        <span class="logo-text">嶼蔻 Maison d’Yuko</span>
+    </div>
+    <nav class="navbar">
+      <div class="menu-item">
+        飯店介紹
+        <div class="dropdown">
+          <a href="#">關於我們</a>
+          <a href="#">房型介紹</a>
+          <a href="#">設施介紹</a>
+          <a href="#">服務項目</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        最新消息
+        <div class="dropdown">
+          <a href="#">最新消息</a>
+          <a href="#">媒體報導</a>
+        </div>
+      </div>
+      <div class="menu-item">線上訂房</div>
+      <div class="menu-item">嶼蔻選物</div>
+      <div class="menu-item">嶼蔻饗食</div>
+      <div class="menu-item">交通方式</div>
+      <div class="menu-item">聯絡我們</div>
+    </nav>
+  </header>
+  
+  <main class="room-container">
+    <h1 class="room-title">豪華雙人房 Deluxe Double</h1>
+  
+    <div class="room-slider">
+        <div><img src="./image/roomtype_1.png"></div>
+        <div><img src="./image/roomtype_2.png"></div>
+        <div><img src="./image/roomtype_3.png"></div>
+        <div><img src="./image/roomtype_4.png"></div>   
+    </div>
+
+    <section class="room-info">
+      <ul>
+        <li><strong>坪數：</strong>12 坪</li>
+        <li><strong>床型：</strong>雙人床一張</li>
+        <li><strong>容納人數：</strong>2 人</li>
+      </ul>
+    </section>
+  
+    <section class="room-features">
+      <h2>設施與服務</h2>
+      <ul>
+        <li>免費 Wi-Fi</li>
+        <li>獨立浴室</li>
+        <li>空調</li>
+        <li>電視、冰箱、保險箱</li>
+        <li>每日客房清潔</li>
+      </ul>
+    </section>
+  
+    <a href="booking.html" class="book-button">立即預訂</a>
+  </main>
+
+  <script src="./vendor/jquery/jquery-3.7.1.min.js"></script>
+  <script src="./vendor/slick/slick.min.js"></script>
+  <script src="./js/roomtype.js"></script>
+
+</body>
+</html>
