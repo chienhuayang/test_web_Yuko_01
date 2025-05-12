@@ -3,41 +3,45 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4ede1;
-  }
-  
-  header {
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #F9F5EF;
     border-bottom: 1px solid #D6CEC2; /* 白金灰邊框 */
     padding: 10px 20px;
-  }
-  
-  .logo {
+}
+
+
+.logo {
     font-size: 24px;
     cursor: pointer;
-  }
-  
-  .navbar {
-    display: flex;
-    gap: 15px;
-    position: relative;
-    background: #D4AF7F;
-  }
-  
-  .menu-item {
+    
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* 將所有 menu-item 靠右對齊 */
+  gap: 15px;
+  position: relative;
+  background: #D4AF7F;
+  padding: 10px 20px;
+}
+
+.menu-item {
     position: relative;
     padding: 10px;
-    
-  }
-  
-  .menu-item:hover .dropdown {
+    margin: 0 10px;
+}
+
+.menu-item:hover .dropdown {
     display: block;
     background-color: beige;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     display: none;
     position: absolute;
     top: 40px;
@@ -46,88 +50,92 @@ body {
     border: 1px solid #ccc;
     z-index: 10;
     min-width: 120px;
-  }
-  
-  .dropdown a {
+}
+
+.dropdown a {
     display: block;
     padding: 8px 12px;
     text-decoration: none;
     color: black;
-  }
-  
-  .dropdown a:hover {
+}
+
+.dropdown a:hover {
     background-color: #C9B69C;
-  }
-  
-  .banner {
+}
+
+.banner {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: #F1F3F2;
     padding: 20px;
-  }
-  
-  .banner img {
-    width: 1800px; /* 設定圖片的寬度 */
-    height: 300px; /* 設定圖片的高度 */
+}
+
+.banner img {
+    width: 100%;  /* 使用百分比讓圖片自適應屏幕大小 */
+    height: 300px;
     object-fit: cover;
-  }
-  
-  .nav-btn {
+}
+
+.nav-btn {
     background: transparent;
     border: none;
     font-size: 2em;
     cursor: pointer;
-  }
-  
-  .content-toggle {
+}
+
+.content-toggle {
     margin: 20px;
     text-align: center;
-  }
-  
-  #contentDisplay {
-    padding: 20px;
-  }
+}
 
-  .logo-image {
+#contentDisplay {
+    padding: 20px;
+}
+
+.logo-image {
     width: 80px;
     height: auto;
-  }
+}
 
-  .logo-text {
-    font-size: 24px;
-    margin-left: 10px;
-    color: #C4A484; /* 奶茶杏金 */
-  }
-  .room-container {
+.logo-text {
+    font-size: 32px;
+    position: relative;
+    top: -20px; /* 向上移動 5px */
+    margin: 0 10px;
+    color: #C4A484;
+}
+
+
+.room-container {
     max-width: 960px;
     margin: auto;
     padding: 20px;
     background-color: #F9F5EF;
-  }
-  
-  .room-title {
+}
+
+.room-title {
     text-align: center;
     margin-bottom: 20px;
     font-size: 32px;
     color: #C4A484; /* 標題強調 */
-  }
-  
-  .room-gallery {
+}
+
+.room-gallery {
     text-align: center;
     position: relative;
-  }
-  
-  .room-gallery img {
-    width: 80%;
+}
+
+.room-gallery img {
+    width: 100%;  /* 使用百分比使圖片寬度自適應 */
     max-height: 400px;
     object-fit: cover;
     border-radius: 12px;
     border: 4px solid #D6CEC2; /* 白金灰 */
-  }
-  
-  .room-gallery button {
+}
+
+.room-gallery button {
     position: absolute;
     top: 50%;
     font-size: 24px;
@@ -138,33 +146,19 @@ body {
     cursor: pointer;
     border-radius: 4px;
     transform: translateY(-50%);
-  }
-  
-  .room-gallery button:first-child {
+}
+
+.room-gallery button:first-child {
     left: 10px;
-  }
-  .room-gallery button:last-child {
+}
+
+.room-gallery button:last-child {
     right: 10px;
-  }
-  
-  .room-info, .room-features {
-    background-color: #A78B71; /* 木質裸棕 */
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-    margin: 20px 0;
-  }
-  
-  .room-info ul, .room-features ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .room-info li, .room-features li {
-    margin-bottom: 8px;
-  }
-  
-  .book-button {
+}
+
+
+
+.book-button {
     display: block;
     width: fit-content;
     margin: 30px auto;
@@ -178,54 +172,183 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .book-button:hover {
+}
+
+.book-button:hover {
     background-color: #9FA8BA; /* 薰衣草灰藍 hover */
-  }
+}
 
 .slider {
-  width: 100%;
-  height: 500px;  /* 輪播框固定高度 */
-  margin: 0 auto;
-  /* position: relative; */
-  overflow: hidden; /* 防止圖片溢出 */
+    width: 100%;
+    height: 500px;  /* 輪播框固定高度 */
+    margin: 0 auto;
+    overflow: hidden; /* 防止圖片溢出 */
 }
 
 .slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* 顯示圖片中央，裁掉多餘邊緣 */
-  object-position: center center;  /* 確保從中間對齊 */
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
 }
 
 div.slick-slide img {
     width: 100%;
     height: auto;
 }
-button.slick-prev{
+
+button.slick-prev {
     left: 10px;
     z-index: 5;
 }
 
-button.slick-next{
+button.slick-next {
     right: 10px;
     z-index: 5;
 }
 
 .room-slider {
-  width: 100%;
-  height: 500px;  /* 輪播框固定高度 */
-  margin: 0 auto;
-  /* position: relative; */
-  overflow: hidden; /* 防止圖片溢出 */
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .room-slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* 顯示圖片中央，裁掉多餘邊緣 */
-  object-position: center center;  /* 確保從中間對齊 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.roomtype-slider {
+    width: 100%;
+    max-width: 500px; /* 改成百分比，更加靈活 */
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.roomtype-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.room-description {
+    display: flex;
+    align-items: flex-start; /* 垂直頂部對齊 */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* 图片部分 */
+.room-description .room-image {
+    flex: 1;  /* 让图片占据剩余的空间 */
+    max-width: 45%;  /* 图片宽度限制为容器的45%，留出空间给文字 */
+    margin-right: 20px;  /* 图片与文字之间的间距 */
+    overflow: hidden;  /* 防止图片溢出 */
+}
+
+.room-description .room-image img {
+    width: 100%;  /* 图片宽度自适应容器 */
+    height: auto;  /* 高度自适应，保持图片比例 */
+    object-fit: cover;  /* 图片填充容器，裁切多余部分 */
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 文字部分 */
+
+.room-features {
+    background-color: #A78B71; /* 木質裸棕 */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin: 20px 0;
+}
+
+.room-info ul, .room-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.room-info li, .room-features li {
+    margin-bottom: 8px;
+}
+
+.room-description .room-info {
+    flex: 1;  /* 让文字部分占据剩余空间 */
+    max-width: 50%;  /* 文字部分宽度限制为容器的50% */
+}
+
+
+.room-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.room-info li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.room-box {
+  display: flex;
+  align-items: flex-start;
+  background-color: #debf9f;
+  border-radius: 15px;
+  padding: 20px;
+  gap: 20px;
+  color: #fff;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.room-image img {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
   display: block;
+  margin: 20px 0;
+}
+
+.room-info {
+  /* background-color: #A78B71; */
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  margin: -20px 0 20px 0;
+  flex: 1;
+}
+
+.room-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.room-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.read-more-btn {
+  padding: 10px 20px;
+  background-color: #f1e0c5;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #e0cba8;
 }
