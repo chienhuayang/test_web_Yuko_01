@@ -2,12 +2,10 @@ function goHome() {
   window.location.href = './homepage.html';
 }
 
-$(".slider").slick({
+$(".roomtype-slider").slick({
             arrow:true, // 是否顯示左右箭頭
             dots:true, // 是否顯示圓點導航
-            centerMode:true, // 是否居中顯示
             centerPadding:"60px", // 居中顯示時的邊距
-            slidesToShow:1, // 顯示幾個圖片
             // responsive:[
             //     {
             //         breakpoint: 768, // 當視窗寬度小於768px時
