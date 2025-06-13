@@ -1,10 +1,10 @@
 body {
     font-family: "Helvetica Neue", sans-serif;
-    background-color: #fdf6ef !important;
+    background-color: #F4EDE1 !important;
 }
 
 header {
-    background-color: #fdf6ef;
+    background-color: #F4EDE1;
     border-bottom: 3px solid #7E4E24 !important;
 }
 
@@ -21,7 +21,7 @@ header .fw-bold.text-brown.ms-3 {
 }
 
 section {
-    background-color: #fdf6ef !important;
+    background-color: #F4EDE1 !important;
 }
 
 
@@ -33,7 +33,7 @@ section {
     overflow: visible;
     /* 讓 logo 可超出 */
     position: relative;
-    background-color: #fdf6ef;
+    background-color: #F4EDE1;
     /* 這裡改成和 body 一樣 */
 }
 
@@ -80,7 +80,7 @@ section {
 .sub-navbar {
     position: sticky;
     top: 0px;
-    background-color: #fdf6ef;
+    background-color: #F4EDE1;
     z-index: 1000;
     /* border-top: 1px solid #ddd; */
 }
@@ -253,7 +253,7 @@ section {
 }
 
 .news-section {
-  background: #fdf6ef;
+  background: #F4EDE1;
   padding: 60px 0 60px 0;
 }
 
@@ -537,7 +537,7 @@ section {
 }
 
 .footer-section {
-  background: #fdf6ef;
+  background: #F4EDE1;
   color: #7E4E24;
   border-top: 4px solid #7E4E24;
   padding: 40px 0 20px 0;
@@ -640,8 +640,9 @@ section {
 }
 
 .rooms-section {
-  background: #fdf6ef;
-  padding: 60px 0 40px 0;
+  background: #F4EDE1;
+  padding: 60px 0 40px 50px;
+  position: relative;
 }
 
 .rooms-container {
@@ -667,6 +668,10 @@ section {
   line-height: 1;
   margin-bottom: -30px;
   margin-left: 10px;
+  position: absolute;
+  left: 0;
+  top: -30px;
+  z-index: 1;
 }
 
 .rooms-title {
@@ -675,17 +680,20 @@ section {
   color: #111;
   margin-bottom: 24px;
   margin-left: 110px;
-  margin-top: -40px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
 }
 
 .rooms-desc {
+  min-width: 220px; /* 或 width: 20%; 視需求調整 */
+  max-width: 320px;
   color: #7E4E24;
   font-size: 1.1rem;
+  line-height: 1.8;
   margin-left: 10px;
   margin-bottom: 0;
   margin-top: 40px;
-  line-height: 1.8;
-  width: 90%;
 }
 
 .rooms-images-group {
@@ -696,8 +704,8 @@ section {
 
 .rooms-images-row {
   display: flex;
-  flex-direction: row;
-  gap: 24px;
+  align-items: center;
+  gap: 32px; /* 可依需求調整間距 */
   margin-bottom: 0;
 }
 
@@ -709,15 +717,34 @@ section {
 }
 
 .room-img-lg {
+  
   width: 380px;
   height: 220px;
-  border-radius: 60px 60px 60px 60px / 80px 80px 80px 80px;
+  border-radius: 160px 60px 60px 160px;
+  background-color: #F4EDE1;
 }
+
 
 .room-img-md {
   width: 260px;
-  height: 160px;
-  border-radius: 120px 120px 120px 120px / 80px 80px 80px 80px;
+  height: 220px;
+  border-radius: 20px 120px 120px 20px;
+}
+
+.room-img-lgd {
+  padding-top: 10px;
+  width: 380px;
+  height: 220px;
+  border-radius: 60px 160px 160px 60px;
+  background-color: #F4EDE1;
+}
+
+.room-img-mdd {
+  padding-top : 10px;
+  width: 260px;
+  height: 220px;
+  border-radius: 120px 20px 20px 120px;
+  background-color: #F4EDE1
 }
 
 .rooms-quote {
@@ -783,7 +810,7 @@ section {
 }
 
 .dining-section {
-  background: #fdf6ef;
+  background: #F4EDE1;
   padding: 60px 0 40px 0;
 }
 
@@ -795,6 +822,7 @@ section {
   letter-spacing: 0.1em;
   line-height: 1;
   margin-bottom: -30px;
+  
 }
 
 .dining-title {
@@ -803,6 +831,8 @@ section {
   color: #111;
   margin-bottom: 18px;
   margin-top: -30px;
+  z-index: 2;
+  position: relative;
 }
 
 .dining-desc {
@@ -878,7 +908,7 @@ section {
 }
 
 .faq-section {
-  background: #fdf6ef;
+  background: #F4EDE1;
   padding: 60px 0 60px 0;
 }
 
@@ -943,6 +973,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.faq-question:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .faq-arrow {
