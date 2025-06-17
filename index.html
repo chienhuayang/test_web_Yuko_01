@@ -13,20 +13,24 @@
 
   <!-- Header -->
   <header class="d-flex justify-content-between align-items-center p-3">
-    <div class="fw-bold text-brown ms-3">Maison d’Yuko</div>
-    <div class="me-3">
-      <img src="./images/icon/hp_member.png" alt="member" class="logo-header" />
-      <a href="#">會員登入</a>
-      <a href="#" id="menuToggle">☰ MENU</a>
-    </div>
+    <div class="fw-bold text-brown">Maison d’Yuko</div>
+    <div class="d-flex">
+      <div class="d-none d-lg-block">
+        <img src="./images/icon/hp_member.png" alt="member" class="logo-header" />
+        <a href="#">會員登入</a>
+      </div>
+      <a href="#" id="menuToggle" class="ml-lg-3">☰ MENU</a>
   </header>
-  <section class="hero-image my-3" style="background-color: #fdf6ef;">
+  <!-- main -->
+  <section class="hero-image my-lg-3" style="background-color: #fdf6ef;">
     <!-- 主圖 -->
     <img src="./images/homepage_02.png" alt="Maison Hero Image" class="hero-background">
 
     <!-- 前景文字 -->
-    <h1 class="text-white mid-right">Bienvenue à la Maison d’Yuko</h1>
-    <p class="text-white mid-right-p">在這座海島，我們邀請您慢下來</p>
+    <div id="banner-text">
+      <h1 class="text-white mid-right">Bienvenue à la Maison d’Yuko</h1>
+      <p class="text-white mid-right-p">在這座海島，我們邀請您慢下來</p>
+    </div>
 
     <!-- 疊加 LOGO -->
     <img src="./images/logo/logo_hp.png" alt="浮出的logo" class="logo-overlay">
@@ -51,26 +55,31 @@
   </nav>
 
   <!-- Sticky 右側按鈕 -->
-  <div class="sticky-icons">
-    <a href="#">🛏 線上訂房</a>
-    <a href="#">👜 帳號選物</a>
-    <a href="#">🍽 餐廳訂位</a>
+  <div class="sticky-icons d-none d-lg-block">
+    <a href="#"><span>🛏<br>線上訂房</span></a>
+    <a href="#"><span>👜<br>帳號選物</span></a>
+    <a href="#"><span>🍽<br>餐廳訂位</span></a>
   </div>
 
   <!-- Overlay Full Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <div class="overlay-menu-header d-flex justify-content-between align-items-start">
       <div class="overlay-logo-contact mb-5">
-        <img src="./images/logo_hp.png" alt="logo" class="overlay-logo mb-3" />
+        <!-- <img src="./images/logo/logo_hp.png" alt="logo" class="overlay-logo mb-3" /> -->
         <div class="overlay-title">嶼蔻渡假村 Maison d’Yuko</div>
-        <div class="overlay-contact">
+        <!-- <div class="overlay-contact">
           <div>+886-7-123-4567</div>
           <div>service@maisondyuko.com</div>
-        </div>
+        </div> -->
       </div>
       <div class="close-btn" id="menuClose">&times;</div>
     </div>
     <div class="overlay-center">
+      <div class="px-5 mb-5 d-flex justify-content-between">
+        <a href="#" class="text-center">🛏<br>線上訂房</a>
+        <a href="#" class="text-center">👜<br>帳號選物</a>
+        <a href="#" class="text-center">🍽<br>餐廳訂位</a>
+      </div>
       <div class="overlay-menu-row d-flex justify-content-center">
         <div class="overlay-menu-col">
           <h5>關於嶼蔻</h5>
@@ -151,31 +160,32 @@
 
   <section id="rooms" class="section rooms-section">
     <div class="container rooms-container">
-      <div class="row">
-        <div class="col-md-4 rooms-info">
-          <div class="rooms-en-title">ROOMS</div>
-          <h2 class="rooms-title">風格房型</h2>
-          
-        </div>
-        <div class="col-md-8 rooms-images-group"></div>
-        <div class="rooms-desc">
+      <div class="rooms-info">
+        <h3 class="rooms-en-title">ROOMS</h3>
+        <h2 class="rooms-title">風格房型</h2>
+      </div>
+      <div class="rooms-images-group">
+        <div class="d-lg-flex">
+          <div class="rooms-desc">
             無論獨旅放鬆、雙人浪漫，還是親子同樂，嶼蔻都精心為您準備好了完美空間！
           </div>
           <div class="rooms-images-row">
             <img src="./images/room/room1.png" alt="房型1" class="room-img room-img-lg" />
             <img src="./images/room/room2.png" alt="房型2" class="room-img room-img-md" />
           </div>
+        </div>
+        <div class="d-lg-flex">
           <div class="rooms-images-row">
             <img src="./images/room/room3.png" alt="房型3" class="room-img room-img-mdd" />
             <img src="./images/room/room4.png" alt="房型4" class="room-img room-img-lgd" />
-            <div class="rooms-quote">
-              <div class="rooms-quote-en">A room for every journey,<br>a view for every soul.</div>
-              <button class="rooms-book-btn">
-                <span class="circle"></span>
-                <span class="book-text">BOOK</span>
-                <span class="arrow"></span>
-              </button>
-            </div>
+          </div>
+          <div class="rooms-quote py-3">
+            <div class="rooms-quote-en">A room for every journey,<br>a view for every soul.</div>
+            <button class="rooms-book-btn">
+              <span class="circle"></span>
+              <span class="book-text">BOOK</span>
+              <span class="arrow"></span>
+            </button>
           </div>
         </div>
       </div>
@@ -184,7 +194,7 @@
 
   <section class="section dining-section" id="dining">
     <div class="container dining-container text-center">
-      <div class="dining-en-title">Dining</div>
+      <h3 class="dining-en-title">Dining</h3>
       <h2 class="dining-title">特色餐廳</h2>
       <div class="dining-desc">用味蕾探索當地，體驗專屬於這座島的餐桌故事</div>
       <div id="diningCarousel" class="carousel slide dining-carousel" data-bs-ride="carousel" data-bs-interval="4000">
@@ -211,17 +221,19 @@
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev dining-carousel-arrow" type="button" data-bs-target="#diningCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev dining-carousel-arrow" type="button" data-bs-target="#diningCarousel"
+          data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
         </button>
-        <button class="carousel-control-next dining-carousel-arrow" type="button" data-bs-target="#diningCarousel" data-bs-slide="next">
+        <button class="carousel-control-next dining-carousel-arrow" type="button" data-bs-target="#diningCarousel"
+          data-bs-slide="next">
           <span class="carousel-control-next-icon"></span>
         </button>
-        <div class="carousel-indicators">
+        <!-- <div class="carousel-indicators">
           <button type="button" data-bs-target="#diningCarousel" data-bs-slide-to="0" class="active"></button>
           <button type="button" data-bs-target="#diningCarousel" data-bs-slide-to="1"></button>
           <button type="button" data-bs-target="#diningCarousel" data-bs-slide-to="2"></button>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -229,7 +241,7 @@
   <section id="faq" class="section faq-section">
     <div class="container faq-container">
       <div class="faq-header">
-        <div class="faq-en-title">FAQ</div>
+        <h3 class="faq-en-title">FAQ</h3>
         <h2 class="faq-title">常見問題</h2>
       </div>
       <div class="faq-list">
@@ -287,13 +299,15 @@
       <div class="row align-items-center">
         <!-- 左側 Logo 與資訊 -->
         <div class="col-md-5 footer-info">
-          <div class="footer-logo-title d-flex align-items-center mb-2">
-            <img src="./images/logo/footer_logo.png" alt="logo" class="footer-logo me-3" />
-            <span class="footer-title">嶼蔻渡假村 Maison d’Yuko</span>
+          <div class="footer-logo-title d-flex flex-column flex-lg-row align-items-center mb-2">
+            <img src="./images/logo/footer_logo.png" alt="logo" class="mr-lg-3 footer-logo me-3" />
+            <div>
+              <p class="footer-title mb-3 mt-4 mt-lg-0">嶼蔻渡假村 Maison d’Yuko</p>
+              <small class="footer-address">南海群島．映灣嶼 9 號．珊瑚灣 2025</small>
+              <small class="footer-tel">+886-7-123-4567</small>
+              <small class="footer-mail">service@maisondyuko.com</small>
+            </div>
           </div>
-          <div class="footer-address">南海群島．映灣嶼 9 號．珊瑚灣 2025</div>
-          <div class="footer-tel">+886-7-123-4567</div>
-          <div class="footer-mail">service@maisondyuko.com</div>
         </div>
         <!-- 右側社群與聯絡 -->
         <div class="col-md-4 offset-md-3 footer-contact text-center">
@@ -332,7 +346,7 @@
 
     // FAQ 展開/收合功能
     document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function () {
         const item = this.closest('.faq-item');
         item.classList.toggle('active');
       });

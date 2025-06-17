@@ -1,255 +1,271 @@
 body {
-    font-family: "Helvetica Neue", sans-serif;
-    background-color: #F4EDE1 !important;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #F4EDE1 !important;
 }
 
 header {
-    background-color: #F4EDE1;
-    border-bottom: 3px solid #7E4E24 !important;
+  background-color: #F4EDE1;
+  border-bottom: 3px solid #7E4E24 !important;
 }
 
 /* header內文字統一顏色與自行並消除超連結底線 */
 header a {
-    color: #7E4E24;
-    text-decoration: none;
+  color: #7E4E24;
+  text-decoration: none;
 }
 
-header .fw-bold.text-brown.ms-3 {
-    margin-left: 100px !important;
-    color: #7E4E24;
-    letter-spacing: 0.1em;
+header .fw-bold.text-brown {
+  color: #7E4E24;
+  letter-spacing: 0.1em;
 }
 
 section {
-    background-color: #F4EDE1 !important;
+  background-color: #F4EDE1 !important;
 }
 
 
 /* Hero 區容器 */
 .hero-image {
-    max-width: 1000px;
-    margin: 0 auto;
-    /* border-radius: 0 0 0 20px; */
-    overflow: visible;
-    /* 讓 logo 可超出 */
-    position: relative;
-    background-color: #F4EDE1;
-    /* 這裡改成和 body 一樣 */
+  max-width: 1000px;
+  margin: 0 auto;
+  /* border-radius: 0 0 0 20px; */
+  overflow: visible;
+  /* 讓 logo 可超出 */
+  position: relative;
+  background-color: #F4EDE1;
+  /* 這裡改成和 body 一樣 */
 }
 
 /* 主圖 */
 .hero-image .hero-background {
-    width: 100%;
-    display: block;
-    border-radius: 0 0 0 150px;
+  width: 100%;
+  display: block;
+  border-radius: 0 0 0 150px;
 }
 
 /* 疊加標題文字 */
 .mid-right {
-    position: absolute;
-    top: 68%;
-    left: 40%;
-    transform: translateY(100%);
-    font: 1.5em sans-serif;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 68%;
+  left: 40%;
+  transform: translateY(100%);
+  font: 2em sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .mid-right-p {
-    position: absolute;
-    top: 75%;
-    left: 53%;
-    transform: translateY(100%);
-    font: 1.3em sans-serif;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 75%;
+  left: 53%;
+  transform: translateY(100%);
+  font: 2em sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .logo-overlay {
-    position: absolute;
-    bottom: 20px;
-    left: -10px;
-    width: 300px;
-    transform: translateY(30%);
-    /* 讓 logo-overlay 只低於MENU圖層 */
-    z-index: 3000;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
-    max-width: none !important;
-    height: auto;
+  position: absolute;
+  bottom: 20px;
+  left: -10px;
+  width: 300px;
+  transform: translateY(30%);
+  /* 讓 logo-overlay 只低於MENU圖層 */
+  z-index: 3000;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  max-width: none !important;
+  height: auto;
 }
 
 /* 子選單 navbar */
 .sub-navbar {
-    position: sticky;
-    top: 0px;
-    background-color: #F4EDE1;
-    z-index: 1000;
-    /* border-top: 1px solid #ddd; */
+  position: sticky;
+  top: 0px;
+  background-color: #F4EDE1;
+  z-index: 1000;
+  /* border-top: 1px solid #ddd; */
 }
 
 .sub-navbar .nav-link {
-    color: #6c4c2f;
-    padding: 1rem;
+  color: #6c4c2f;
+  padding: 1rem;
 }
 
 .sub-navbar .dropdown-menu {
-    background-color: #f8f1e8;
+  background-color: #f8f1e8;
 }
 
 /* 不顯示子選單中的下拉選單箭頭 */
 .sub-navbar .dropdown-toggle::after {
-    display: none;
+  display: none;
 }
 
 .sticky-icons {
-    position: fixed;
-    top: 40%;
-    right: 10px;
-    z-index: 1050;
+  position: fixed;
+  top: 40%;
+  right: 0;
+  z-index: 1050;
 }
 
 .sticky-icons a {
-    display: block;
-    margin-bottom: 10px;
-    background-color: #6c4c2f;
-    color: white;
-    padding: 8px 12px;
-    text-decoration: none;
-    border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:90px;
+  width: 90px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #6c4c2f;
+  color: white;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.sticky-icons a:hover{
+  opacity: .8;
+}
+
+.sticky-icons a:nth-child(2){
+  background-color: red;
+}
+
+.sticky-icons a:nth-child(3){
+  background-color: rgb(128, 15, 15);
 }
 
 /* 滿版選單 overlay */
 .overlay-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(184, 141, 103, 0.9);
-    color: #fff;
-    z-index: 2000;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(184, 141, 103, 0.9);
+  color: #fff;
+  z-index: 2000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
 }
 
 .overlay-menu.active {
-    display: flex;
-    z-index: 9999;
+  display: flex;
+  z-index: 9999;
 }
 
 .overlay-center {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
 }
 
 .overlay-logo-contact {
-    margin-bottom: 0;
-    margin-left: 20%;
-    margin-top: 10%;
-    text-align: left;
+  margin-bottom: 0;
+  margin-left: 20%;
+  margin-top: 10%;
+  text-align: left;
 }
 
 .close-btn {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 1;
-    z-index: 10;
-    padding: 0 24px;
-    background: none;
-    border: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1;
+  z-index: 10;
+  padding: 0 24px;
+  background: none;
+  border: none;
 }
 
 .overlay-menu-header {
-    width: 100%;
-    max-width: 1200px;
-    margin: 40px auto 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    min-height: 120px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  min-height: 120px;
 }
 
 .overlay-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
 }
 
 .overlay-contact {
-    font-size: 1rem;
-    opacity: 0.95;
-    margin-bottom: 0;
+  font-size: 1rem;
+  opacity: 0.95;
+  margin-bottom: 0;
 }
 
 .overlay-menu-row {
-    gap: 40px;
-    flex-wrap: wrap;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .overlay-menu-col {
-    min-width: 160px;
-    margin: 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  min-width: 160px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .overlay-menu-col h5 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: left;
-    letter-spacing: 2px;
-    /* border-bottom: 2px solid #fff; */
-    padding-bottom: 0.5rem;
-    width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+  letter-spacing: 2px;
+  /* border-bottom: 2px solid #fff; */
+  padding-bottom: 0.5rem;
+  width: 100%;
 }
 
 .overlay-menu-col a {
-    display: block;
-    font-size: 1rem;
-    color: #fff;
-    margin: 0.3rem 0;
-    text-align: left;
-    font-weight: 400;
-    padding-left: 0.2rem;
-    width: 100%;
-    text-decoration: none;
-    transition: color 0.2s;
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0.3rem 0;
+  text-align: left;
+  font-weight: 400;
+  padding-left: 0.2rem;
+  width: 100%;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 .overlay-menu-col a:hover {
-    color: #ffe6c7;
-    text-decoration: underline;
+  color: #ffe6c7;
+  text-decoration: underline;
 }
 
 
 .overlay-logo {
-    width: 200px;
-    height: auto;
-    position: absolute;
-    left: 4%;
-    top: 65%;
-    transform: translateY(-50%);
+  width: 200px;
+  height: auto;
+  position: absolute;
+  left: 4%;
+  top: 65%;
+  transform: translateY(-50%);
 }
 
 .overlay-contact,
 .overlay-title {
-    text-align: left;
-    /* 不換行 */
-    white-space: nowrap;
-    /* 保持與logo的距離 */
-    padding-left: 60px;
+  text-align: left;
+  /* 不換行 */
+  white-space: nowrap;
+  /* 保持與logo的距離 */
+  padding-left: 60px;
 }
 
 .news-section {
@@ -304,12 +320,14 @@ section {
 }
 
 .news-image {
-    height: 546px; /* 780px * 0.7 */
-    width: 378px;  /* 540px * 0.7 */
-    border-radius: 200px 200px 0 0 / 200px 200px 0 0;
-    object-fit: cover;
-    aspect-ratio: 1/1.1;
-    background: #fff;
+  height: 546px;
+  /* 780px * 0.7 */
+  width: 378px;
+  /* 540px * 0.7 */
+  border-radius: 200px 200px 0 0 / 200px 200px 0 0;
+  object-fit: cover;
+  aspect-ratio: 1/1.1;
+  background: #fff;
 }
 
 .news-more {
@@ -364,176 +382,177 @@ section {
 
 /* 網頁寬度小於736px時則mid-right、img依比例縮小 */
 @media (max-width: 736px) {
-    .mid-right {
-        font: 1em sans-serif;
-        left: 50%;
-    }
+  .mid-right {
+    font: 1em sans-serif;
+    left: 50%;
+  }
 
-    .mid-right-p {
-        font: 1em sans-serif;
-        left: 53%;
-    }
+  .mid-right-p {
+    font: 1em sans-serif;
+    left: 53%;
+  }
 
-    .logo-overlay {
-        width: 150px;
-        left: -20px;
-        bottom: 10px;
-    }
-
-
-
-    /* 以下是menu */
-
-    .overlay-menu-header {
-        flex-direction: row;
-        align-items: flex-start;
-        margin: 20px auto 0 auto;
-        min-height: 80px;
-    }
-
-    .overlay-logo-contact {
-        margin-left: 10px;
-        margin-top: 10px;
-        gap: 12px;
-        text-align: right;
-    }
-
-    .close-btn {
-        font-size: 2rem;
-        padding: 0 12px;
-    }
-
-    .overlay-menu-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .overlay-menu-col {
-        min-width: 180px;
-        width: 80vw;
-        align-items: center;
-    }
-
-    .overlay-menu-col h5,
-    .overlay-menu-col a {
-        text-align: center;
-        width: 100%;
-        padding-left: 0;
-
-    }
-
-    .overlay-logo {
-        width: 50px;
-        min-width: 50px;
-        height: auto;
-        position: absolute;
-        left: 4%;
-    }
-
-    .overlay-contact,
-    .overlay-title {
-        margin-left: 20%;
-        text-align: left;
-        font-size: 0.9em !important;
-        /* 不換行 */
-        white-space: nowrap;
-        /* 保持與logo的距離 */
-        padding-left: 10px;
-        padding-top: 10px;
+  .logo-overlay {
+    width: 150px;
+    left: -20px;
+    bottom: 10px;
+  }
 
 
-    }
 
-    .mid-right {
-        font: 0.8em sans-serif;
-        left: 50%;
-    }
+  /* 以下是menu */
 
-    .mid-right-p {
-        font: 0.8em sans-serif;
-        left: 53%;
-    }
+  .overlay-menu-header {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 20px auto 0 auto;
+    min-height: 80px;
+  }
 
-    .logo-overlay {
-        width: 150px;
-        left: -20px;
-        bottom: 10px;
-    }
+  .overlay-logo-contact {
+    margin-left: 10px;
+    margin-top: 10px;
+    gap: 12px;
+    text-align: right;
+  }
 
-    .sub-navbar .nav {
-        display: none;
-    }
+  .close-btn {
+    font-size: 2rem;
+    padding: 0 12px;
+  }
 
-    header {
-        position: sticky;
+  .overlay-menu-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-    }
+  .overlay-menu-col {
+    min-width: 180px;
+    width: 80vw;
+    align-items: center;
+  }
+
+  .overlay-menu-col h5,
+  .overlay-menu-col a {
+    text-align: center;
+    width: 100%;
+    padding-left: 0;
+
+  }
+
+  .overlay-logo {
+    width: 50px;
+    min-width: 50px;
+    height: auto;
+    position: absolute;
+    left: 4%;
+  }
+
+  .overlay-contact,
+  .overlay-title {
+    margin-left: 20%;
+    text-align: left;
+    font-size: 0.9em !important;
+    /* 不換行 */
+    white-space: nowrap;
+    /* 保持與logo的距離 */
+    padding-left: 10px;
+    padding-top: 10px;
 
 
-    header .me-3 a {
-        margin-right: 0;
-        margin-left: 8px;
-    }
+  }
 
-    header .me-3 a:first-of-type {
-        margin-left: 0;
-    }
-    /* 以下news */
-    .news-image {
-        display: none;
-    }
+  .mid-right {
+    font: 0.8em sans-serif;
+    left: 50%;
+  }
+
+  .mid-right-p {
+    font: 0.8em sans-serif;
+    left: 53%;
+  }
+
+  .logo-overlay {
+    width: 150px;
+    left: -20px;
+    bottom: 10px;
+  }
+
+  .sub-navbar .nav {
+    display: none;
+  }
+
+  header {
+    position: sticky;
+
+  }
+
+
+  header .me-3 a {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  header .me-3 a:first-of-type {
+    margin-left: 0;
+  }
+
+  /* 以下news */
+  .news-image {
+    display: none;
+  }
 }
 
 /* Tablet */
 @media (min-width: 768px) {
-    .logo-overlay {
-        width: 300px;
-        left: 0px;
-    }
+  .logo-overlay {
+    width: 300px;
+    left: 0px;
+  }
 
-    .sub-navbar .nav {
-        margin-left: 200px;
-    }
+  .sub-navbar .nav {
+    margin-left: 200px;
+  }
 
-    header .me-3 {
-        margin-right: 100px !important;
-    }
+  header .me-3 {
+    margin-right: 100px !important;
+  }
 
-    header .me-3 a {
-        margin-right: 0;
-        margin-left: 8px;
-    }
+  header .me-3 a {
+    margin-right: 0;
+    margin-left: 8px;
+  }
 
-    header .me-3 a:first-of-type {
-        margin-left: 0;
-    }
+  header .me-3 a:first-of-type {
+    margin-left: 0;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
-    .logo-overlay {
-        width: 350px;
-        left: -30px;
-        bottom: 20px;
-    }
+  .logo-overlay {
+    width: 350px;
+    left: -30px;
+    bottom: 20px;
+  }
 
-    .sub-navbar .nav {
-        margin-left: 400px;
-    }
+  .sub-navbar .nav {
+    margin-left: 400px;
+  }
 
-    header .me-3 {
-        margin-right: 100px !important;
-    }
+  header .me-3 {
+    margin-right: 100px !important;
+  }
 
-    header .me-3 a {
-        margin-right: 0;
-        margin-left: 8px;
-    }
+  header .me-3 a {
+    margin-right: 0;
+    margin-left: 8px;
+  }
 
-    header .me-3 a:first-of-type {
-        margin-left: 0;
-    }
+  header .me-3 a:first-of-type {
+    margin-left: 0;
+  }
 }
 
 .footer-section {
@@ -551,7 +570,6 @@ section {
 
 .footer-logo-title {
   font-size: 1.25rem;
-  font-weight: bold;
   color: #7E4E24;
 }
 
@@ -563,7 +581,6 @@ section {
 
 .footer-title {
   font-size: 1.2rem;
-  font-weight: bold;
   letter-spacing: 0.05em;
 }
 
@@ -667,10 +684,8 @@ section {
   letter-spacing: 0.1em;
   line-height: 1;
   margin-bottom: -30px;
-  margin-left: 10px;
   position: absolute;
-  left: 0;
-  top: -30px;
+  top: -10px;
   z-index: 1;
 }
 
@@ -686,7 +701,8 @@ section {
 }
 
 .rooms-desc {
-  min-width: 220px; /* 或 width: 20%; 視需求調整 */
+  min-width: 220px;
+  /* 或 width: 20%; 視需求調整 */
   max-width: 320px;
   color: #7E4E24;
   font-size: 1.1rem;
@@ -705,7 +721,8 @@ section {
 .rooms-images-row {
   display: flex;
   align-items: center;
-  gap: 32px; /* 可依需求調整間距 */
+  gap: 32px;
+  /* 可依需求調整間距 */
   margin-bottom: 0;
 }
 
@@ -717,7 +734,7 @@ section {
 }
 
 .room-img-lg {
-  
+
   width: 380px;
   height: 220px;
   border-radius: 160px 60px 60px 160px;
@@ -740,7 +757,7 @@ section {
 }
 
 .room-img-mdd {
-  padding-top : 10px;
+  padding-top: 10px;
   width: 260px;
   height: 220px;
   border-radius: 120px 20px 20px 120px;
@@ -822,7 +839,7 @@ section {
   letter-spacing: 0.1em;
   line-height: 1;
   margin-bottom: -30px;
-  
+
 }
 
 .dining-title {
@@ -862,7 +879,6 @@ section {
   max-width: 500px;
   height: 350px;
   object-fit: cover;
-  border-radius: 0 0 120px 120px / 0 0 120px 120px;
   margin: 0 -40px;
   transition: opacity 0.4s, filter 0.4s;
 }
@@ -878,7 +894,7 @@ section {
   opacity: 1;
   filter: none;
   z-index: 2;
-  box-shadow: 0 4px 24px rgba(126,78,36,0.08);
+  box-shadow: 0 4px 24px rgba(126, 78, 36, 0.08);
 }
 
 .dining-carousel-arrow {
@@ -953,7 +969,6 @@ section {
 
 .faq-item {
   margin-bottom: 32px;
-  border-bottom: 3px solid #7E4E24;
   padding-bottom: 12px;
   position: relative;
 }
@@ -961,12 +976,13 @@ section {
 .faq-question {
   background: none;
   border: none;
+  border-bottom: 1px solid #7E4E24;
   width: 100%;
   text-align: left;
   font-size: 1.15rem;
   color: #7E4E24;
   font-weight: bold;
-  padding: 0 40px 0 0;
+  padding: 0 40px 12px 0;
   cursor: pointer;
   outline: none;
   position: relative;
@@ -1010,7 +1026,7 @@ section {
 .faq-answer {
   font-size: 1rem;
   color: #222;
-  margin-top: 18px;
+  margin-top: 12px;
   margin-left: 0;
   display: none;
   line-height: 1.8;
@@ -1028,24 +1044,239 @@ section {
     margin: 0 -10px;
     border-radius: 0 0 60px 60px / 0 0 60px 60px;
   }
+
   .carousel-control-prev {
     left: 2vw;
   }
+
   .carousel-control-next {
     right: 2vw;
   }
+
   .faq-en-title {
     font-size: 2.5rem;
     margin-left: 0;
     top: -10px;
   }
+
   .faq-title {
     font-size: 1.5rem;
     margin-left: 60px;
   }
+
   .faq-list {
     margin-top: 30px;
   }
 }
 
+#footer h3 {
+  font-size: 20px;
+}
 
+#footer small {
+  display: block;
+  font-size: 14px;
+}
+
+.footer-bottom * {
+  font-size: 14px !important;
+}
+
+
+/* 手機版 */
+
+@media screen and (max-width: 991px) {
+  * {
+    position: relative;
+  }
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .news-more-btn,
+  .rooms-book-btn {
+    margin-left: auto;
+  }
+
+  .rooms-book-btn {
+    margin-right: 20px;
+  }
+
+  .container.rooms-container {
+    padding: 0;
+  }
+
+  .rooms-section {
+    padding: 0;
+  }
+
+  .rooms-section .col-lg-8 {
+    padding: 0;
+  }
+
+  .rooms-section .row {
+    margin: 0;
+  }
+
+  .rooms-section img {
+    max-width: 90vw;
+  }
+
+  .rooms-section img:last-child {
+    margin-right: auto;
+    border-radius: 0 160px 160px 0;
+  }
+
+  .rooms-section img:first-child {
+    margin-left: auto;
+    border-radius: 160px 0 0 160px;
+  }
+
+  .rooms-desc {
+    padding: 0 20px;
+    margin-top: 0;
+  }
+
+  .rooms-images-row {
+    flex-direction: column;
+  }
+
+  .hero-image .hero-background {
+    border-radius: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    padding: 20px;
+  }
+
+  #banner-text {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    top: 40px;
+    text-align: center;
+  }
+
+  #banner-text * {
+    position: unset;
+    top: 0;
+    left: 0;
+    transform: unset;
+    font-size: 1em;
+  }
+
+  #banner-text p {
+    position: absolute;
+    height: 100vh;
+    width: 1rem;
+    word-break: break-word;
+    top: 100px;
+    left: 90%;
+    text-align: center;
+  }
+
+  .container.container.dining-container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .dining-desc {
+    padding: 0 20px;
+  }
+
+  .container.container.dining-container img {
+    border-radius: 0;
+    height: 50vh;
+  }
+
+  .faq-header {
+    text-align: center;
+  }
+
+  .faq-header * {
+    margin: 0;
+    position: unset;
+  }
+
+  .rooms-info {
+    padding: 0;
+  }
+
+  h2.news-title {
+    position: unset;
+  }
+
+  h2 {
+    width: 100%;
+    font-size: 24px !important;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: unset;
+    bottom: unset;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  h3 {
+    width: 100%;
+    font-size: 22px !important;
+    text-align: center;
+    margin: 0 !important;
+    position: absolute;
+    top: -20px;
+    bottom: unset;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  .faq-list * {
+    pointer-events: none;
+  }
+
+  .faq-item {
+    padding-bottom: 20px;
+  }
+
+  .faq-question {
+    padding-right: 0;
+  }
+
+  .faq-arrow {
+    display: none;
+  }
+
+  .faq-answer {
+    display: block;
+  }
+
+  #footer {
+    padding-bottom: 40px;
+  }
+
+  #footer .row {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #overlayMenu {
+    background-color: #F4EDE1;
+  }
+
+  #overlayMenu * {
+    color: #7E4E24;
+  }
+
+  .logo-overlay{
+    display: none;
+  }
+}
