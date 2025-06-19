@@ -7,6 +7,9 @@
   <title>Maison d’Yuko</title>
   <link href="./room_type/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./room_type/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -16,15 +19,17 @@
     <div class="fw-bold text-brown">Maison d’Yuko</div>
     <div class="d-flex">
       <div class="d-none d-lg-block">
+        <a href="#" id="menuToggle" class="ml-lg-3">☰ MENU</a>
+        <span class="mx-3"></span>
         <img src="./images/icon/hp_member.png" alt="member" class="logo-header" />
         <a href="#">會員登入</a>
       </div>
-      <a href="#" id="menuToggle" class="ml-lg-3">☰ MENU</a>
+
   </header>
   <!-- main -->
   <section class="hero-image my-lg-3" style="background-color: #fdf6ef;">
     <!-- 主圖 -->
-    <img src="./images/homepage_02.png" alt="Maison Hero Image" class="hero-background">
+    <img src="./images/homepage_01.png" alt="Maison Hero Image" class="hero-background">
 
     <!-- 前景文字 -->
     <div id="banner-text">
@@ -37,21 +42,23 @@
   </section>
 
   <!-- 子選單 Navbar -->
-  <nav class="sub-navbar d-flex justify-content-center">
+  <nav class="sub-navbar d-flex justify-content-center align-items-center">
     <ul class="nav">
+      <li class="nav-item"><a class="nav-link" href="#">關於嶼蔻</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">最新消息</a></li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">關於嶼蔻</a>
+        <a class="nav-link dropdown-toggle" href="#" tabindex="0">探索嶼蔻</a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">品牌故事</a></li>
-          <li><a class="dropdown-item" href="#">環境簡介</a></li>
+          <li><a class="dropdown-item" href="#">珍饈美饌</a></li>
+          <li><a class="dropdown-item" href="#">多元設施</a></li>
         </ul>
       </li>
-      <li class="nav-item"><a class="nav-link" href="#news">最新消息</a></li>
-      <li class="nav-item"><a class="nav-link" href="#dining">探索餐廳</a></li>
       <li class="nav-item"><a class="nav-link" href="#rooms">精緻客房</a></li>
       <li class="nav-item"><a class="nav-link" href="#faq">交通資訊</a></li>
       <li class="nav-item"><a class="nav-link" href="#footer">聯絡我們</a></li>
+      <li class="nav-item"><a class="nav-link" href="#faq">常見問題</a></li>
     </ul>
+
   </nav>
 
   <!-- Sticky 右側按鈕 -->
@@ -65,12 +72,12 @@
   <div class="overlay-menu" id="overlayMenu">
     <div class="overlay-menu-header d-flex justify-content-between align-items-start">
       <div class="overlay-logo-contact mb-5">
-        <!-- <img src="./images/logo/logo_hp.png" alt="logo" class="overlay-logo mb-3" /> -->
+        <img src="./images/logo/logo_hp.png" alt="logo" class="overlay-logo mb-3" />
         <div class="overlay-title">嶼蔻渡假村 Maison d’Yuko</div>
-        <!-- <div class="overlay-contact">
+        <div class="overlay-contact">
           <div>+886-7-123-4567</div>
           <div>service@maisondyuko.com</div>
-        </div> -->
+        </div>
       </div>
       <div class="close-btn" id="menuClose">&times;</div>
     </div>
@@ -99,10 +106,10 @@
         </div>
         <div class="overlay-menu-col">
           <h5>精緻客房</h5>
-          <a href="#">馥香居</a>
+          <a href="#">蔻香居</a>
+          <a href="#">海音居</a>
           <a href="#">晨曦之庭</a>
           <a href="#">月影行館</a>
-          <a href="#">海音居</a>
         </div>
         <div class="overlay-menu-col">
           <h5>其他</h5>
@@ -170,14 +177,38 @@
             無論獨旅放鬆、雙人浪漫，還是親子同樂，嶼蔻都精心為您準備好了完美空間！
           </div>
           <div class="rooms-images-row">
-            <img src="./images/room/room1.png" alt="房型1" class="room-img room-img-lg" />
-            <img src="./images/room/room2.png" alt="房型2" class="room-img room-img-md" />
+            <div class="room-img-wrapper">
+              <div class="room-img-lg">
+                <img src="./images/room/room1.png" alt="晨曦之庭" class="room-img" />
+                <div class="room-img-overlay"></div>
+                <div class="room-img-text"></div>
+              </div>
+            </div>
+            <div class="room-img-wrapper">
+              <div class="room-img-md">
+                <img src="./images/room/room2.png" alt="蔻香居" class="room-img" />
+                <div class="room-img-overlay"></div>
+                <div class="room-img-text"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="d-lg-flex">
           <div class="rooms-images-row">
-            <img src="./images/room/room3.png" alt="房型3" class="room-img room-img-mdd" />
-            <img src="./images/room/room4.png" alt="房型4" class="room-img room-img-lgd" />
+            <div class="room-img-wrapper">
+              <div class="room-img-mdd">
+                <img src="./images/room/room3.png" alt="海音居" class="room-img" />
+                <div class="room-img-overlay"></div>
+                <div class="room-img-text"></div>
+              </div>
+            </div>
+            <div class="room-img-wrapper">
+              <div class="room-img-lgd">
+                <img src="./images/room/room4.png" alt="月影行館" class="room-img" />
+                <div class="room-img-overlay"></div>
+                <div class="room-img-text"></div>
+              </div>
+            </div>
           </div>
           <div class="rooms-quote py-3">
             <div class="rooms-quote-en">A room for every journey,<br>a view for every soul.</div>
@@ -193,51 +224,35 @@
   </section>
 
   <section class="section dining-section" id="dining">
-    <div class="container dining-container text-center">
-      <h3 class="dining-en-title">Dining</h3>
-      <h2 class="dining-title">特色餐廳</h2>
-      <div class="dining-desc">用味蕾探索當地，體驗專屬於這座島的餐桌故事</div>
-      <div id="diningCarousel" class="carousel slide dining-carousel" data-bs-ride="carousel" data-bs-interval="4000">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="dining-carousel-images">
-              <img src="./images/dining/dining_01.png" class="dining-img left" alt="餐廳1">
-              <img src="./images/dining/dining_02.png" class="dining-img center" alt="餐廳2">
-              <img src="./images/dining/dining_03.png" class="dining-img right" alt="餐廳3">
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="dining-carousel-images">
-              <img src="./images/dining/dining_02.png" class="dining-img left" alt="餐廳2">
-              <img src="./images/dining/dining_01.png" class="dining-img center" alt="餐廳3">
-              <img src="./images/dining/dining_03.png" class="dining-img right" alt="餐廳1">
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="dining-carousel-images">
-              <img src="./images/dining/dining_03.png" class="dining-img left" alt="餐廳3">
-              <img src="./images/dining/dining_01.png" class="dining-img center" alt="餐廳1">
-              <img src="./images/dining/dining_02.png" class="dining-img right" alt="餐廳2">
-            </div>
+    <div class="dining-container" style="text-align:center;">
+      <div id="diningCarousel" class="owl-carousel owl-theme">
+        <div class="item">
+          <h3 class="dining-en-title">Facilities</h3>
+          <h2 class="dining-title">豐富設施</h2>
+          <p>放慢腳步，享受每一刻的自在與療癒</p>
+          <div class="dining-carousel-images">
+            <img src="./images/pool_01.png" class="dining-img" alt="泳池設施">
           </div>
         </div>
-        <button class="carousel-control-prev dining-carousel-arrow" type="button" data-bs-target="#diningCarousel"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next dining-carousel-arrow" type="button" data-bs-target="#diningCarousel"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-        <!-- <div class="carousel-indicators">
-          <button type="button" data-bs-target="#diningCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#diningCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#diningCarousel" data-bs-slide-to="2"></button>
-        </div> -->
-      </div>
+        <div class="item">
+          <h3 class="dining-en-title">Dining</h3>
+          <h2 class="dining-title">特色餐廳</h2>
+          <p>用味蕾探索當地，體驗專屬於這座島的餐桌故事</p>
+          <div class="dining-carousel-images">
+            <img src="./images/dining/dining_04.png" class="dining-img" alt="餐廳2">
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="dining-en-title">Gift Shop</h3>
+          <h2 class="dining-title">經典選物</h2>
+          <p>收藏的不只是物件，更是旅途中的每一份心動</p>
+          <div class="dining-carousel-images">
+            <img src="./images/dining/dining_03.png" class="dining-img" alt="餐廳3">
+          </div>
+        </div>
+      <!-- </div> -->
     </div>
   </section>
-
   <section id="faq" class="section faq-section">
     <div class="container faq-container">
       <div class="faq-header">
@@ -334,7 +349,8 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $('#menuToggle').on('click', function () {
@@ -350,6 +366,28 @@
         const item = this.closest('.faq-item');
         item.classList.toggle('active');
       });
+    });
+
+    document.querySelectorAll('.room-img-wrapper').forEach(function (wrapper) {
+      var img = wrapper.querySelector('.room-img');
+      var text = wrapper.querySelector('.room-img-text');
+      if (img && text) text.textContent = img.alt;
+    });
+    $('.owl-carousel').owlCarousel({ 
+      stagePadding: 100,
+      loop: true, 
+      margin: 0, 
+      nav: true, 
+      items: 1,
+      center:true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 1 },
+        1000: { items: 1 }
+      }
     });
   </script>
 </body>
